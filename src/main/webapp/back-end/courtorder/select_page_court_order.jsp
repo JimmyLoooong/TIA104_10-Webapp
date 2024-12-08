@@ -73,34 +73,6 @@ h4 {
             <input type="submit" value="送出">
         </FORM>
     </li>
-
-    <li>
-        <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back-end/courtorder/courtorder.do">
-            <b>選擇場館編號:</b>
-            <select size="1" name="stadiumOrderId">
-                <c:forEach var="courtorderVO" items="${courtOrderSvc.all}">
-                    <option value="${courtorderVO.stadiumOrderId}">${courtorderVO.stadiumId}
-                </c:forEach>
-            </select>
-            <input type="hidden" name="action" value="getOne_For_Display_Court_Order">
-            <input type="submit" value="送出">
-        </FORM>
-    </li>
-    <li>
-    <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/back-end/courtorder/courtorder.do">
-        <b>依評分查詢:</b>
-        <select size="1" name="rating">
-            <option value="">請選擇</option>
-            <option value="5">5星</option>
-            <option value="4">4星</option>
-            <option value="3">3星</option>
-            <option value="2">2星</option>
-            <option value="1">1星</option>
-        </select>
-        <input type="hidden" name="action" value="getByRating">
-        <input type="submit" value="送出">
-    </FORM>
-</li>
 </ul>
 
 <h3>場館訂單管理</h3>
